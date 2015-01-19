@@ -1,10 +1,11 @@
 #Changelog
 All Notable changes to `newrelic-tools` will be documented in this file
 
-## NEXT - YYYY-MM-DD
+## 0.1 - 2015-01-19
 
 ### Added
-- Nothing
+- Deployment value object
+- DeploymentNotifier class to handle posting the data to newrelic
 
 ### Deprecated
 - Nothing
