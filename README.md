@@ -33,6 +33,25 @@ echo $skeleton->echoPhrase('Hello, League!');
 $ phpunit
 ```
 
+## Usage
+
+``` php
+use Afoozle\NewrelicTools\Deployments\Deployment;
+use Afoozle\NewrelicTools\Deployments\DeploymentNotifier;
+
+$applicationId = 123456; // Add your application ID here
+$apiKey = 'add-your-key-here'; // Add your api key here
+
+$deployment = new Deployment($applicationId);
+$deployment->setUser('Your Name');
+$deployment->setChangelog('Your Changelog (optional)');
+$deployment->setDescription('Your Description (optional)');
+$deployment->setRevision('Your Revision Number (optional)');
+
+$notifier = new DeploymentNotifier($apiKey);
+$notifier->notify($deployment);
+```
+
 ## Contributing
 
 Please see [CONTRIBUTING](https://github.com/thephpleague/:package_name/blob/master/CONTRIBUTING.md) for details.
